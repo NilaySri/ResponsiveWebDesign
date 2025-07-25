@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="main-title">Welcome to My Interactive Webpage</h1>
+    <button id="color-btn">Change Background Color</button>
+    <input type="text" id="name-input" placeholder="Type your name">
+    <p id="greeting"></p>
+    <div id="hover-box">Hover over me!</div>
+
+    <script>
+        // Change background color on button click
+        document.getElementById('color-btn').addEventListener('click', function() {
+            const colors = ['#f8b400', '#6a2c70', '#b83b5e', '#0bceaf', '#f38181'];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        });
+
+        // Greet user as they type
+        document.getElementById('name-input').addEventListener('input', function(e) {
+            const name = e.target.value.trim();
+            document.getElementById('greeting').textContent = name ? `Hello, ${name}!` : '';
+        });
+
+        // Hover effect for the box
+        const hoverBox = document.getElementById('hover-box');
+        hoverBox.addEventListener('mouseenter', function() {
+            hoverBox.textContent = "You're hovering!";
+            hoverBox.classList.add('hovered');
+        });
+        hoverBox.addEventListener('mouseleave', function() {
+            hoverBox.textContent = "Hover over me!";
+            hoverBox.classList.remove('hovered');
+        });
+    </script>
+</body>
+</html>

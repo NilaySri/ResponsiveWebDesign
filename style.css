@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f5f6fa;
+    transition: background 0.4s;
+}
+
+#main-title {
+    color: #22223b;
+    margin-bottom: 24px;
+}
+
+#color-btn {
+    padding: 10px 20px;
+    background: #3a86ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s;
+}
+
+#color-btn:hover {
+    background: #26547c;
+}
+
+#name-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+#greeting {
+    margin-top: 16px;
+    font-size: 1.2em;
+    color: #2d6a4f;
+}
+
+#hover-box {
+    margin-top: 30px;
+    padding: 30px;
+    background: #f7fff7;
+    border: 2px solid #43aa8b;
+    border-radius: 8px;
+    width: 220px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#hover-box.hovered {
+    background: #43aa8b;
+    color: #fff;
+}
